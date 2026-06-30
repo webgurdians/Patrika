@@ -14,19 +14,21 @@ import {
   siteConfig,
 } from "@/lib/site-data";
 
+import { buildMetadata, generateSchema } from "@/lib/metadata";
+
+export const metadata = buildMetadata({
+  title: "Patrika Media & Marketing | Growth Systems for Trust-Based Businesses",
+  description: "Patrika builds growth systems (content, strategy, custom web systems, and WhatsApp automation) for trust-based businesses across West Bengal and India.",
+  path: "/",
+});
+
 export default function Home() {
   return (
     <>
       <StructuredData
         data={[
-          {
-            "@context": "https://schema.org",
-            "@type": "Organization",
-            name: siteConfig.name,
-            url: siteConfig.url,
-            email: siteConfig.email,
-            telephone: siteConfig.phone,
-          },
+          generateSchema("WebSite"),
+          generateSchema("LocalBusiness"),
           {
             "@context": "https://schema.org",
             "@type": "FAQPage",
