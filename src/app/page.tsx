@@ -164,16 +164,17 @@ export default function Home() {
           {founders.map((founder) => (
             <div key={founder.name} className="card-border rounded-[2rem] p-8 flex flex-col justify-between">
               <div>
-                <div className="relative h-64 overflow-hidden rounded-[1.5rem] bg-neutral-900">
-                  {founder.image && (
+                <div className="relative h-72 sm:h-64 overflow-hidden rounded-[1.5rem] bg-neutral-900">
+                  <picture>
+                    <source media="(max-width: 640px)" srcSet={founder.mobileImage || founder.image} />
                     <img 
                       src={founder.image} 
                       alt={founder.name} 
                       className={`absolute inset-0 h-full w-full object-cover ${
-                        founder.name.includes("Neel") ? "object-[55%_35%]" : "object-[48%_30%]"
+                        founder.name.includes("Neel") ? "object-[50%_15%]" : "object-[50%_15%]"
                       }`}
                     />
-                  )}
+                  </picture>
                 </div>
                 <p className="mt-6 font-serif text-4xl">{founder.name}</p>
                 <p className="mt-2 text-sm uppercase tracking-[0.2em] text-gold">{founder.role}</p>
