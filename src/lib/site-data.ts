@@ -160,14 +160,14 @@ export const founders = [
     name: "Neel Sen",
     role: "Growth & Strategy",
     image: "/neel.png",
-    mobileImage: "/neel-mobile.png",
+    mobileImage: "/prasenjit-mobile.png",
     blurb: "Neel shapes offer clarity, growth direction, and the commercial systems behind qualified lead generation.",
   },
   {
     name: "Prasenjit Dutta",
     role: "Creative Director",
     image: "/prasenjit.png",
-    mobileImage: "/prasenjit-mobile.png",
+    mobileImage: "/neel-mobile.png",
     blurb: "Prasenjit leads visual language, production quality, and the premium storytelling layer of each engagement.",
   },
 ];
