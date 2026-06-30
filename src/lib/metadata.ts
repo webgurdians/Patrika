@@ -28,7 +28,7 @@ export function buildMetadata({
       description,
     },
     other: {
-      "google-site-verification": "Apib7-x98H0j5cPqHWwSMm6dNU4GmODRoqxLiDzdx9I",
+      "google-site-verification": "drSCGTq-z9yVuaofgpUOq6k-Rn7ZskdezFS2Vw04EDg",
     },
   };
 }
