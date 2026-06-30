@@ -6,8 +6,8 @@ export function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="border-t border-white/10 bg-[#040404] text-foreground/80">
-      <div className="section-shell py-16 sm:py-20">
+    <footer className="border-t border-white/10 bg-[#030303] text-foreground/80">
+      <div className="section-shell pt-16 pb-12 sm:pt-20 sm:pb-14">
         {/* Main Grid: All 4 columns align perfectly at the top */}
         <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-12 lg:gap-8">
           
@@ -31,7 +31,7 @@ export function Footer() {
           {/* Column 2: Explore Links (Spans 2 grid cols) */}
           <div className="lg:col-span-2 space-y-5 lg:pl-4">
             <p className="text-[10px] font-bold uppercase tracking-[0.25em] text-gold">Explore</p>
-            <nav className="flex flex-col space-y-3 text-sm">
+            <nav className="flex flex-col space-y-3.5 text-sm">
               <Link href="/services" className="text-foreground/60 transition-colors duration-200 hover:text-gold w-fit">Services</Link>
               <Link href="/industries" className="text-foreground/60 transition-colors duration-200 hover:text-gold w-fit">Industries</Link>
               <Link href="/case-studies" className="text-foreground/60 transition-colors duration-200 hover:text-gold w-fit">Case Studies</Link>
@@ -42,7 +42,7 @@ export function Footer() {
           {/* Column 3: Contact & Legal Links (Spans 2 grid cols) */}
           <div className="lg:col-span-2 space-y-5">
             <p className="text-[10px] font-bold uppercase tracking-[0.25em] text-gold">Legal</p>
-            <nav className="flex flex-col space-y-3 text-sm">
+            <nav className="flex flex-col space-y-3.5 text-sm">
               <Link href="/privacy-policy" className="text-foreground/60 transition-colors duration-200 hover:text-gold w-fit">Privacy Policy</Link>
               <Link href="/terms" className="text-foreground/60 transition-colors duration-200 hover:text-gold w-fit">Terms</Link>
               <Link href="/contact" className="text-foreground/60 transition-colors duration-200 hover:text-gold w-fit">Book Session</Link>
@@ -54,20 +54,20 @@ export function Footer() {
             <p className="text-[10px] font-bold uppercase tracking-[0.25em] text-gold">Connect</p>
             <div className="space-y-4">
               <div className="space-y-1">
-                <p className="text-[9px] uppercase tracking-[0.2em] text-foreground/40">Email Us</p>
-                <a href={`mailto:${siteConfig.email}`} className="text-sm text-foreground/80 transition-colors duration-200 hover:text-gold block break-all font-medium">
+                <p className="text-[9px] uppercase tracking-[0.2em] text-foreground/45">Email Us</p>
+                <a href={`mailto:${siteConfig.email}`} className="text-[15px] text-foreground/80 transition-colors duration-200 hover:text-gold block break-all font-medium">
                   {siteConfig.email}
                 </a>
               </div>
               <div className="space-y-1">
-                <p className="text-[9px] uppercase tracking-[0.2em] text-foreground/40">WhatsApp / Call</p>
+                <p className="text-[9px] uppercase tracking-[0.2em] text-foreground/45">WhatsApp / Call</p>
                 <a 
                   href="https://wa.me/916297648194" 
                   target="_blank" 
                   rel="noopener noreferrer" 
-                  className="text-sm text-foreground/80 transition-colors duration-200 hover:text-gold flex items-center gap-2 font-medium"
+                  className="text-[15px] text-foreground/80 transition-colors duration-200 hover:text-gold flex items-center gap-2 font-medium"
                 >
-                  <span className="inline-block w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
+                  <span className="inline-block w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
                   <span>{siteConfig.phone}</span>
                 </a>
               </div>

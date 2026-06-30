@@ -162,11 +162,21 @@ export default function Home() {
         <SectionHeading eyebrow="Team" title="Led by growth and creative operators." />
         <div className="mt-10 grid gap-6 lg:grid-cols-2">
           {founders.map((founder) => (
-            <div key={founder.name} className="card-border rounded-[2rem] p-8">
-              <div className="h-56 rounded-[1.5rem] bg-[linear-gradient(135deg,rgba(201,168,76,0.24),rgba(255,255,255,0.06))]" />
-              <p className="mt-6 font-serif text-4xl">{founder.name}</p>
-              <p className="mt-2 text-sm uppercase tracking-[0.2em] text-gold">{founder.role}</p>
-              <p className="mt-4 max-w-xl text-sm leading-7 text-foreground/72">{founder.blurb}</p>
+            <div key={founder.name} className="card-border rounded-[2rem] p-8 flex flex-col justify-between">
+              <div>
+                <div className="relative h-64 overflow-hidden rounded-[1.5rem] bg-neutral-900">
+                  {founder.image && (
+                    <img 
+                      src={founder.image} 
+                      alt={founder.name} 
+                      className="absolute inset-0 h-full w-full object-cover object-center"
+                    />
+                  )}
+                </div>
+                <p className="mt-6 font-serif text-4xl">{founder.name}</p>
+                <p className="mt-2 text-sm uppercase tracking-[0.2em] text-gold">{founder.role}</p>
+                <p className="mt-4 max-w-xl text-sm leading-7 text-foreground/72">{founder.blurb}</p>
+              </div>
             </div>
           ))}
         </div>
