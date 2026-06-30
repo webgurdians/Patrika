@@ -1,11 +1,11 @@
 export const siteConfig = {
-  name: "Patrika Media & Marketing Enterprise",
+  name: "Patrika Media & Marketing",
   shortName: "Patrika Media",
   description:
     "Patrika builds growth systems for trust-based businesses in healthcare, education, hospitality, and premium local services across West Bengal.",
   url: "https://patrikamedia.com",
-  email: "hello@patrikamedia.com",
-  phone: "+91 90000 00000",
+  email: "hello@patrikamedia.in",
+  phone: "+91 6297648194",
   location: "West Bengal, India",
 };
 

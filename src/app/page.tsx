@@ -159,7 +159,7 @@ export default function Home() {
       </section>
 
       <section className="section-shell py-18">
-        <SectionHeading eyebrow="Founders" title="Led by growth and creative operators." />
+        <SectionHeading eyebrow="Team" title="Led by growth and creative operators." />
         <div className="mt-10 grid gap-6 lg:grid-cols-2">
           {founders.map((founder) => (
             <div key={founder.name} className="card-border rounded-[2rem] p-8">
