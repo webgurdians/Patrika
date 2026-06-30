@@ -169,7 +169,9 @@ export default function Home() {
                     <img 
                       src={founder.image} 
                       alt={founder.name} 
-                      className="absolute inset-0 h-full w-full object-cover object-center"
+                      className={`absolute inset-0 h-full w-full object-cover ${
+                        founder.name.includes("Neel") ? "object-[55%_35%]" : "object-[48%_30%]"
+                      }`}
                     />
                   )}
                 </div>
