@@ -209,8 +209,8 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section-shell py-20">
-        <div className="card-border rounded-[2.4rem] p-10 text-center sm:p-14">
+      <section className="section-shell pt-14 pb-10 sm:pt-16 sm:pb-12">
+        <div className="card-border rounded-[2.4rem] p-8 text-center sm:p-12">
           <p className="gold-label mb-4 text-xs">Final CTA</p>
           <h2 className="font-serif text-5xl">Book A Strategy Session</h2>
           <p className="mx-auto mt-5 max-w-2xl text-foreground/72">
