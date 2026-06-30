@@ -8,31 +8,54 @@ export function Footer() {
   return (
     <footer className="border-t border-white/10 bg-[#040404] text-foreground/80">
       <div className="section-shell py-16 sm:py-20">
-        {/* Main Grid: Left brand details, Right links */}
-        <div className="grid gap-12 lg:grid-cols-12 lg:gap-16">
-          {/* Left Column: Brand details & contact info */}
-          <div className="lg:col-span-6 space-y-8">
-            <div className="space-y-5">
-              <div className="flex items-center gap-3">
-                <BrandMark glow={false} className="w-[100px] shrink-0 sm:w-[115px]" />
-                <div className="space-y-0.5">
-                  <p className="text-xs font-bold uppercase tracking-[0.25em] text-gold">Patrika Media</p>
-                  <p className="text-[9px] uppercase tracking-[0.15em] text-foreground/40">{siteConfig.location}</p>
-                </div>
+        {/* Main Grid: All 4 columns align perfectly at the top */}
+        <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-12 lg:gap-8">
+          
+          {/* Column 1: Brand & Logo (Spans 5 grid cols) */}
+          <div className="lg:col-span-5 space-y-6">
+            <div className="flex items-center gap-3">
+              <BrandMark glow={false} className="w-[100px] shrink-0 sm:w-[115px]" />
+              <div className="space-y-0.5">
+                <p className="text-xs font-bold uppercase tracking-[0.25em] text-gold">Patrika Media</p>
+                <p className="text-[9px] uppercase tracking-[0.15em] text-foreground/40">{siteConfig.location}</p>
               </div>
-              <h2 className="font-serif text-3xl sm:text-[2.5rem] leading-[1.12] text-foreground/90 max-w-xl">
-                Growth systems for trust-based businesses.
-              </h2>
-              <p className="max-w-lg text-sm leading-relaxed text-foreground/50">
-                Premium strategy, content, websites, automation, and AI visibility built for businesses where trust drives conversion.
-              </p>
             </div>
+            <p className="font-serif text-2xl sm:text-3xl leading-[1.2] text-foreground/90">
+              Growth systems for trust-based businesses across West Bengal.
+            </p>
+            <p className="text-xs leading-relaxed text-foreground/50 max-w-sm">
+              Content, strategy, websites, automation, and AI visibility for businesses built on trust.
+            </p>
+          </div>
 
-            {/* Direct Contact info integrated nicely inside the left block */}
-            <div className="flex flex-wrap gap-x-8 gap-y-4 pt-4 border-t border-white/5 max-w-lg">
+          {/* Column 2: Explore Links (Spans 2 grid cols) */}
+          <div className="lg:col-span-2 space-y-5 lg:pl-4">
+            <p className="text-[10px] font-bold uppercase tracking-[0.25em] text-gold">Explore</p>
+            <nav className="flex flex-col space-y-3 text-sm">
+              <Link href="/services" className="text-foreground/60 transition-colors duration-200 hover:text-gold w-fit">Services</Link>
+              <Link href="/industries" className="text-foreground/60 transition-colors duration-200 hover:text-gold w-fit">Industries</Link>
+              <Link href="/case-studies" className="text-foreground/60 transition-colors duration-200 hover:text-gold w-fit">Case Studies</Link>
+              <Link href="/resources" className="text-foreground/60 transition-colors duration-200 hover:text-gold w-fit">Resources</Link>
+            </nav>
+          </div>
+
+          {/* Column 3: Contact & Legal Links (Spans 2 grid cols) */}
+          <div className="lg:col-span-2 space-y-5">
+            <p className="text-[10px] font-bold uppercase tracking-[0.25em] text-gold">Legal</p>
+            <nav className="flex flex-col space-y-3 text-sm">
+              <Link href="/privacy-policy" className="text-foreground/60 transition-colors duration-200 hover:text-gold w-fit">Privacy Policy</Link>
+              <Link href="/terms" className="text-foreground/60 transition-colors duration-200 hover:text-gold w-fit">Terms</Link>
+              <Link href="/contact" className="text-foreground/60 transition-colors duration-200 hover:text-gold w-fit">Book Session</Link>
+            </nav>
+          </div>
+
+          {/* Column 4: Contact Information (Spans 3 grid cols) */}
+          <div className="lg:col-span-3 space-y-5">
+            <p className="text-[10px] font-bold uppercase tracking-[0.25em] text-gold">Connect</p>
+            <div className="space-y-4">
               <div className="space-y-1">
                 <p className="text-[9px] uppercase tracking-[0.2em] text-foreground/40">Email Us</p>
-                <a href={`mailto:${siteConfig.email}`} className="text-sm text-foreground/80 transition-colors duration-200 hover:text-gold block">
+                <a href={`mailto:${siteConfig.email}`} className="text-sm text-foreground/80 transition-colors duration-200 hover:text-gold block break-all font-medium">
                   {siteConfig.email}
                 </a>
               </div>
@@ -42,7 +65,7 @@ export function Footer() {
                   href="https://wa.me/916297648194" 
                   target="_blank" 
                   rel="noopener noreferrer" 
-                  className="text-sm text-foreground/80 transition-colors duration-200 hover:text-gold flex items-center gap-1.5"
+                  className="text-sm text-foreground/80 transition-colors duration-200 hover:text-gold flex items-center gap-2 font-medium"
                 >
                   <span className="inline-block w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
                   <span>{siteConfig.phone}</span>
@@ -51,29 +74,6 @@ export function Footer() {
             </div>
           </div>
 
-          {/* Spacer */}
-          <div className="hidden lg:block lg:col-span-1" />
-
-          {/* Explore Links */}
-          <div className="lg:col-span-2 space-y-6">
-            <p className="text-[10px] font-bold uppercase tracking-[0.25em] text-gold">Explore</p>
-            <nav className="flex flex-col space-y-3.5 text-sm">
-              <Link href="/services" className="text-foreground/60 transition-colors duration-200 hover:text-gold w-fit">Services</Link>
-              <Link href="/industries" className="text-foreground/60 transition-colors duration-200 hover:text-gold w-fit">Industries</Link>
-              <Link href="/case-studies" className="text-foreground/60 transition-colors duration-200 hover:text-gold w-fit">Case Studies</Link>
-              <Link href="/resources" className="text-foreground/60 transition-colors duration-200 hover:text-gold w-fit">Resources</Link>
-            </nav>
-          </div>
-
-          {/* Legal / Location Links */}
-          <div className="lg:col-span-3 space-y-6">
-            <p className="text-[10px] font-bold uppercase tracking-[0.25em] text-gold">Contact & Legal</p>
-            <nav className="flex flex-col space-y-3.5 text-sm">
-              <Link href="/privacy-policy" className="text-foreground/60 transition-colors duration-200 hover:text-gold w-fit">Privacy Policy</Link>
-              <Link href="/terms" className="text-foreground/60 transition-colors duration-200 hover:text-gold w-fit">Terms</Link>
-              <Link href="/contact" className="text-foreground/60 transition-colors duration-200 hover:text-gold w-fit">Book a Strategy Session</Link>
-            </nav>
-          </div>
         </div>
       </div>
       
