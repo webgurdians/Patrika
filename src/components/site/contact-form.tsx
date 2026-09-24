@@ -6,9 +6,16 @@ import { Button } from "@/components/ui/button";
 const industries = ["Healthcare", "Education", "Hospitality", "Premium Local Business", "Other"];
 const budgets = ["₹15k - ₹35k", "₹35k - ₹80k", "₹80k - ₹1.5L", "₹1.5L+"];
 
-export function ContactForm() {
+export function ContactForm({
+  intent = "Strategy Session",
+  submitLabel = "Book Strategy Session",
+}: {
+  intent?: string;
+  submitLabel?: string;
+}) {
   return (
     <form action={submitLeadAction} className="card-border grid gap-5 rounded-[2rem] p-7">
+      <input type="hidden" name="intent" value={intent} />
       <div className="grid gap-5 md:grid-cols-2">
         <Input name="name" placeholder="Name" required />
         <Input name="phone" placeholder="Phone" required />
@@ -42,7 +49,10 @@ export function ContactForm() {
         </select>
       </div>
       <Textarea name="message" placeholder="Tell us about your goals, bottlenecks, or timeline." required />
-      <Button type="submit">Book Strategy Session</Button>
+      <Button type="submit">{submitLabel}</Button>
+      <p className="text-xs leading-5 text-foreground/45">
+        We use these details only to assess fit and respond to your enquiry.
+      </p>
     </form>
   );
 }

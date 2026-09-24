@@ -13,7 +13,7 @@ const links = [
   { href: "/services", label: "Services" },
   { href: "/industries", label: "Industries" },
   { href: "/case-studies", label: "Case Studies" },
-  { href: "/blog", label: "Blog" },
+  { href: "/blog", label: "Insights" },
   { href: "/contact", label: "Contact" },
 ];
 
@@ -24,15 +24,10 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 border-b border-white/8 bg-black/65 backdrop-blur-xl">
       <div className="section-shell flex h-20 items-center justify-between gap-6">
-        <Link
-          href="/"
-          className="block"
-          onClick={() => setIsOpen(false)}
-        >
+        <Link href="/" className="block" onClick={() => setIsOpen(false)}>
           <BrandMark className="w-[110px] sm:w-[138px]" />
         </Link>
 
-        {/* Desktop Navigation */}
         <nav className="hidden items-center gap-6 lg:flex">
           {links.map((link) => (
             <Link
@@ -48,12 +43,10 @@ export function Header() {
           ))}
         </nav>
 
-        {/* Desktop CTA */}
         <Button asChild className="hidden lg:inline-flex">
-          <Link href="/contact">Book Strategy Call</Link>
+          <Link href="/growth-diagnostic">Growth Diagnostic</Link>
         </Button>
 
-        {/* Mobile Hamburger Button */}
         <button
           onClick={() => setIsOpen(!isOpen)}
           className="inline-flex items-center justify-center p-2 text-foreground/80 hover:text-gold lg:hidden focus:outline-none"
@@ -63,9 +56,8 @@ export function Header() {
         </button>
       </div>
 
-      {/* Mobile Drawer Dropdown */}
       {isOpen && (
-        <div className="absolute inset-x-0 top-20 z-40 border-b border-white/8 bg-black/95 px-6 py-8 shadow-2xl backdrop-blur-2xl transition-all duration-300 lg:hidden">
+        <div className="absolute inset-x-0 top-20 z-40 border-b border-white/8 bg-black/95 px-6 py-8 shadow-2xl backdrop-blur-2xl lg:hidden">
           <nav className="flex flex-col space-y-5">
             {links.map((link) => (
               <Link
@@ -73,13 +65,20 @@ export function Header() {
                 href={link.href}
                 onClick={() => setIsOpen(false)}
                 className={cn(
-                  "text-base tracking-[0.2em] uppercase text-foreground/80 hover:text-gold py-1.5 border-b border-white/5",
+                  "border-b border-white/5 py-1.5 text-base tracking-[0.2em] uppercase text-foreground/80 hover:text-gold",
                   pathname === link.href && "text-gold",
                 )}
               >
                 {link.label}
               </Link>
             ))}
+            <Link
+              href="/growth-diagnostic"
+              onClick={() => setIsOpen(false)}
+              className="pt-2 text-base font-medium tracking-[0.2em] uppercase text-gold"
+            >
+              Growth Diagnostic
+            </Link>
           </nav>
         </div>
       )}
